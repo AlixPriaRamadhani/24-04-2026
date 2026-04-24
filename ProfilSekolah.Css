@@ -1,0 +1,187 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #6c6c6c;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    animation: fadeDown 1s ease;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    font-size: 18px;
+    opacity: 0.9;
+    animation: fadeUp 1.2s ease;
+}
+
+/* BUTTON */
+.btn {
+    background: white;
+    color: #000000;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+/* SECTION JURUSAN */
+.jurusan {
+    padding: 60px 20px;
+    text-align: center;
+    background: #c6c6c6;
+}
+
+.jurusan h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* GRID */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* CARD */
+.card {
+    background: rgb(255, 255, 255);
+    color: #000000;
+    padding: 30px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* efek glow hover */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgb(97, 97, 97), transparent);
+    top: 0;
+    left: -100%;
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* ANIMASI */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    
+}
+
+/* FASILITAS */
+.fasilitas {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #e3e3e3;
+}
+
+.fasilitas h2 {
+    margin-bottom: 30px;
+}
+
+.fasilitas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.fasilitas-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.fasilitas-card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* TESTIMONI */
+.testimoni {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.testimoni-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.testi-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.testi-card:hover {
+    transform: scale(1.05);
+}
+
+.testi-card p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
